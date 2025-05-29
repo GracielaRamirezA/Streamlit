@@ -10,7 +10,6 @@ client = OpenAI(api_key=openai_api_key)
 # Instrucción y advertencia
 st.markdown("""
 Pega el fragmento de código donde realizas el preprocesamiento con `StandardScaler`, `MinMaxScaler`, o `RobustScaler`. 
-Este sistema detectará si estás aplicando `.fit()` en el conjunto de prueba, lo cual **no debe hacerse**.
 """)
 
 student_code = st.text_area("📋 Código del estudiante")
