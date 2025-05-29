@@ -38,5 +38,11 @@ Responde de forma clara y breve:
         temperature=0,
     )
 
+    result = response.choices[0].message.content
     st.markdown("### 📄 Resultado:")
-    st.write(response.choices[0].message.content)
+    st.write(result)
+
+    # Lanzar globos si el código fue correcto
+    if "código es correcto" in result.lower() or "no se encontró error" in result.lower():
+        st.success("¡Muy bien hecho! 🎉")
+        st.balloons()
