@@ -12,7 +12,7 @@ st.markdown("""
 Pega el fragmento de código donde realizas el preprocesamiento con `StandardScaler`, `MinMaxScaler`, o `RobustScaler`. 
 """)
 
-student_code = st.text_area("📋 Código del estudiante")
+student_code = st.text_area("📋 Pega aquí tu código")
 
 if st.button("🧠 Evaluar código"):
     prompt = f"""
