@@ -1,7 +1,7 @@
 # mini bot
 import streamlit as st
 
-st.title("💬 Mini Chatbot (solo repite lo que dices)")
+st.title("💬 Mini Chatbot ")
 
 # Entrada de usuario
 user_input = st.chat_input("Escribe algo...")
