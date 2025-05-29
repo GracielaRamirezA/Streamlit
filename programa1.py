@@ -3,13 +3,15 @@ import streamlit as st
 
 st.title("💬 Mini Chatbot (solo repite lo que dices)")
 
-# Entrada tipo chat (abajo de la pantalla)
+# Entrada de usuario
 user_input = st.chat_input("Escribe algo...")
 
-# Si el usuario escribe algo, mostramos los mensajes
 if user_input:
-    # Mostrar el mensaje del usuario
-    st.chat_message("user").write(user_input)
+    if user_input.lower() == "hola":
+        response = "¡Hola! ¿Cómo estás? 😊"
+    elif user_input.lower() == "adiós":
+        response = "¡Hasta luego! 👋"
+    else:
+        response = f"{user_input} <- eso dijiste"
 
-    # Mostrar una respuesta simple del asistente
-    st.chat_message("assistant").write(f"{user_input} <- eso dijiste")
+
