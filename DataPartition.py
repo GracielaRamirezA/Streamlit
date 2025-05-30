@@ -25,7 +25,6 @@ aspect_to_review = st.sidebar.selectbox(
     "Selecciona el aspecto a revisar:",
     [
         "Uso de .fit() en test",
-        "Data Leakage",
         "División Train-Test"
     ]
 )
@@ -42,17 +41,6 @@ Responde de forma clara y breve:
 - ¿El código aplica correctamente los escaladores?
 - ¿Se está usando `.fit()` en el test?
 - ¿Qué recomendación harías?
-"""
-elif aspect_to_review == "Data Leakage":
-    prompt = f"""
-Actúa como un experto en Machine Learning. Evalúa si el siguiente código presenta posibles fugas de datos (data leakage), es decir, si utiliza información del conjunto de prueba para transformar el conjunto de entrenamiento o si mezcla los datos de forma incorrecta. Indica si hay errores y sugiere una corrección.
-
-Código:
-{student_code}
-
-Responde de forma clara y breve:
-- ¿El código presenta data leakage?
-- ¿Cómo se podría corregir si hay problemas?
 """
 elif aspect_to_review == "División Train-Test":
     prompt = f"""
